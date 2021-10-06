@@ -1,8 +1,12 @@
 body
 {
-    background-color: cadetblue;
+    background-color: blue;
+    
 }
 tr,th,table,td
 {
     border: 1px solid black;
+    border-radius:5px;
+     height: 440px;
+  overflow: scroll;
 }
