@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose');
-const dbURI = 'mongodb+srv://pritesh_123:password_123@blogapp.vpdet.mongodb.net/blogdatabase?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://<username>:<password>@blogapp.vpdet.mongodb.net/databasename?retryWrites=true&w=majority';
 const Blog = require('./models/blog')
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
@@ -36,10 +36,7 @@ app.get('/add-blog' , (req,res)=>
   {
     res.send(result);
   })
-  .catch((err)=>
-  {
-    console.log(err);
-  });
+;
 });
 
 app.get('/all-blogs',(req,res)=>{
@@ -63,13 +60,7 @@ app.get('/findby-id',(req,res)=>
     console.log(err);
   })
 });
-// app.get('/about', function (req, res) {
-//   const blog = [
-//     {name:'Pritesh' , Password: 'Password'},
-//     {name:'Ritesh' , Password: 'assword'},
-//   ]
-//   res.render('about' ,{blog:blog});
-// })
+
 app.get('/blog/create', function (req, res) {
   res.render('create');
 })
