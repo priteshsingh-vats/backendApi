@@ -18,12 +18,7 @@ mongoose.connect(dbURI).then((result)=>
 
  
 app.get('/about', function (req, res) {
-  Blog.find().then((result)=>
-  {
-     res.render('about',{home:'blog',blog:result});
-  })
- 
-})
+}
 
 app.get('/add-blog' , (req,res)=>
 {
