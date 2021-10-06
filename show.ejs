@@ -1,0 +1,31 @@
+<%-include('./partials/header.ejs')   %>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/home">Home Page</a>
+        <a href="/about">About Page</a>
+        </nav>
+        <h1>Welcome to Show Page</h1>
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Snippet</th>
+                <th>Body</th>
+                <th>Edit</th>
+                </tr>
+                
+        
+            <tr>
+        <form method="POST" action="/blogs/<%=blog._id%>?_method=DELETE"">   
+          <td><%=blog.title%></td>
+          <td><%=blog.snippet%></td>
+          <td><%=blog.body%></td>
+         <td> <input type="submit">   </td>
+        </form>
+     
+        </table>
+
+        <%-include('./partials/footer.ejs')   %>
+    </body>
+    </html>

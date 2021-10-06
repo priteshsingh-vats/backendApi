@@ -1,0 +1,30 @@
+<%-include('./partials/header.ejs')   %>
+    <title>Document|<%=home%></title>
+</head>
+<body>
+    <nav>
+        <a href="/home">Home Page</a>
+        <a href="/about">About Page</a>
+        </nav>
+    <h1>Welcome to the About page</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Snippet</th>
+            <th>Body</th>
+            <th>Edit</th>
+            </tr>
+            
+    <%for(var i=0;i<blog.length;i++) {%>
+        <tr>
+           
+      <td><%=blog[i].title%></td>
+      <td><%=blog[i].snippet%></td>
+      <td><%=blog[i].body%></td>
+     <td> <a href="/blogs/<%=blog[i]._id%>">Edit</a></td>
+      </tr>
+   <%}%>
+    </table>
+   <%-include('./partials/footer.ejs')   %>
+</body>
+</html>
