@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose');
-const dbURI = 'mongodb+srv://<username>:<password>@blogapp.vpdet.mongodb.net/databasename?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://spyder:password123@blogapp.vpdet.mongodb.net/databasename?retryWrites=true&w=majority';
 const Blog = require('./models/blog')
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
