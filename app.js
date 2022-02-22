@@ -28,8 +28,8 @@ app.get('/about', function (req, res) {
 app.get('/add-blog' , (req,res)=>
 {
   const blog = new Blog({
-    title: 'my blog',
-    snippet:'This is my first blog',
+    title: 'my new blog',
+    snippet:'This is my newer first blog',
     body:'Hello everyone this is my first ever blog'
   });
   blog.save().then((result)=>
